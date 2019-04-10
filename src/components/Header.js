@@ -1,23 +1,24 @@
-import React from "react"
-import logo from "../logo.svg"
+import React, { Component } from "react"
+import { NavLink } from "react-router-dom"
 
-const Header = props => {
-  return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit {props.name} <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  )
+import "./Header.css"
+
+class Header extends Component {
+  render() {
+    return (
+      <div className="Header-header">
+        <NavLink exact to="/" activeClassName="selected" className="link">
+          Accueil
+        </NavLink>
+        <NavLink to="/signin" activeClassName="selected" className="link">
+          Login
+        </NavLink>
+        {/* <div className="Header-link">Link</div>
+        <div className="Header-link">Link</div>
+        <div className="Header-link">Link</div> */}
+      </div>
+    )
+  }
 }
 
 export default Header

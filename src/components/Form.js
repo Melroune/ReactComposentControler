@@ -11,16 +11,21 @@ class Form extends React.Component {
     console.log("poulet", this)
     alert("A name was submitted: " + this.state.email)
   }
-  handleChange = event => {
-    console.log(event.target.name)
-    this.setState({ [event.target.name]: event.target.value })
+  handleChange = e => {
+    // const key = e.target.value.replace(/[*]+/g, "")
+    // this.setState({ [e.target.name]: key })
+    if (e.target.value.includes("*")) {
+      return false
+    } else {
+      this.setState({ [e.target.name]: e.target.value })
+    }
   }
 
   render() {
     console.log(this)
     return (
       <div>
-        Form{" "}
+        Form
         <p>
           info: {this.state.email} name: {this.state.firstname}
         </p>
