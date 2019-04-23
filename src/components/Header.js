@@ -10,6 +10,9 @@ class Header extends Component {
         <NavLink exact to="/" activeClassName="selected" className="link">
           Accueil
         </NavLink>
+        <NavLink to="/characters" activeClassName="selected" className="link">
+          Characters
+        </NavLink>    
         <NavLink to="/signin" activeClassName="selected" className="link">
           Login
         </NavLink>
