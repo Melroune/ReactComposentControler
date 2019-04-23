@@ -46,10 +46,13 @@ class Characters extends Component {
         />
         <input type="submit" onClick={this.getCharacter} />
         {this.state.filterData.map(character => {
-          let url = `/characters/${character.id}`      
+          let url = `/characters/${character.id}`
           return (
-          <p key={character.id}><Link to={url}>{character.name}</Link></p>
-        )})}
+            <p key={character.id}>
+              <Link to={url}>{character.name}</Link>
+            </p>
+          )
+        })}
       </div>
     )
   }

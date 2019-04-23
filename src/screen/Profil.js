@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-
+import React, { Component } from "react"
+import DisplayProfil from "../components/DisplayProfil"
 class Profil extends Component {
-  state = {
-    character: {},
-  }
   render() {
     console.log(this.props.match.params.id)
     return (
       <div>
-        fr
+        <DisplayProfil id={this.props.match.params.id} />
       </div>
     )
   }
